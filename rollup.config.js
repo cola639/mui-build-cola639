@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer')
 import typescript from '@rollup/plugin-typescript'
 
 // the entry point for the library
-const input = 'src/index.ts'
+const input = ['src/components/index.ts']
 let config = []
 let MODE = [{ fomart: 'esm' }, { fomart: 'umd' }]
 
@@ -14,7 +14,7 @@ MODE.map((m) => {
     input: input,
     output: {
       // then name of your package
-      name: 'mui-cola638',
+      name: 'mui-cola637',
       file: `dist/index.${m.fomart}.js`,
       format: m.fomart,
       exports: 'auto',
